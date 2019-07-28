@@ -43,6 +43,7 @@ class  settrap(threading.Thread):
 		self.run()
 if __name__ == "__main__":
 	t=[]
+	print(header)
 	for i in knownports:
 		pro=settrap(i)
 		t.append(pro)
