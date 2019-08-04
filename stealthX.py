@@ -66,10 +66,12 @@ class web(threading.Thread):
 			httpd.serve_forever()
 def page():
 	f=open("index.html","w")
-	f.write("<h1>Attack Count is "+str(count)+"</h1>\n")
+	f.write("<!DOCTYPE html>\n<html>\n<head><title>StealthX</title></head>\n<body>\n<center>\n<h1>StealthX</h1>\n")
+	f.write("<h1>Attack Count is "+str(count)+"</h1><br>\n")
 	f.write("open ports are>><br>")
 	for i in up_ports:
 		f.write(str(i)+"<br>")
+	f.write("</center>\n</body>\n</html>")
 	f.close()
 if __name__ == "__main__":
 	t=[]
